@@ -2,6 +2,12 @@ import assets from "@/public/assets/assets";
 
 import Image from "next/image";
 import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
+import { FiFacebook, FiYoutube } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { HiOutlineMail } from "react-icons/hi";
+import { IoLocationOutline } from "react-icons/io5";
+import { LuPhone } from "react-icons/lu";
 
 export default function Home() {
   const aboutGradient =
@@ -10,7 +16,7 @@ export default function Home() {
   const cardGradient =
     "bg-gradient-to-r from-[#32333593] via-[#171717] via-30% via-[#171717] via-60% to-[#32333593]";
   return (
-    <main className=" relative ">
+    <main className="relative scroll-smooth">
       <Image
         src={assets.Ellips}
         alt=""
@@ -18,45 +24,47 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <header className="md:flex px-5 sm:px-10 md:px-20 mb-20 md:mt-10">
-        <div className="h-auto flex flex-col justify-end">
-          <div className="flex">
-            <div className="flex flex-col justify-center items-center">
-              <Image src={assets.group} alt="" className="h-[80%]" />
+      <header id="home">
+        <div className="md:flex px-5 sm:px-10 md:px-20 pt-40 md:pt-64">
+          <div className="h-auto flex flex-col justify-end ">
+            <div className="flex">
+              <div className="flex flex-col justify-center items-center">
+                <Image src={assets.group} alt="" className="h-[80%]" />
+              </div>
+              <div className="text-2xl sm:text-3xl lg:text-5xl text-white h-auto w-auto">
+                <h2>Comprehensive</h2>
+                <h2>Cybersecurity Strategies for </h2>
+                <h2>Growth and Resilience</h2>
+                <p className="text-xs lg:text-base">
+                  Unlock your business&apos;s full potential with our
+                  comprehensive cybersecurity strategies. Safeguard your growth
+                  and resilience in the digital age.
+                </p>
+              </div>
             </div>
-            <div className="text-2xl sm:text-3xl lg:text-5xl text-white h-auto w-auto">
-              <h2>Comprehensive</h2>
-              <h2>Cybersecurity Strategies for </h2>
-              <h2>Growth and Resilience</h2>
-              <p className="text-xs lg:text-base">
-                Unlock your business&apos;s full potential with our
-                comprehensive cybersecurity strategies. Safeguard your growth
-                and resilience in the digital age.
-              </p>
-            </div>
-          </div>
 
-          <Link
-            href="/#"
-            className="text-white md:ms-10 mb-5 md:mb-10 mt-5 md:mt-[5%] bg-gradient-to-r from-[#00A7D6] to-[#0A767B] w-48 px-4 py-2 rounded-lg"
-          >
-            {" "}
-            Learn more
-          </Link>
-        </div>
-        <div className="relative">
-          <Image
-            src={assets.Ellips}
-            alt=""
-            className="absolute -top-20 right-0 md:hidden"
-          />
-          <Image src={assets.hero} alt="" />
+            <Link
+              href="/#"
+              className="text-white md:ms-10 mb-5 md:mb-10 mt-5 md:mt-[5%] bg-gradient-to-r from-[#00A7D6] to-[#0A767B] w-48 px-4 py-2 rounded-lg"
+            >
+              {" "}
+              Learn more
+            </Link>
+          </div>
+          <div className="relative">
+            <Image
+              src={assets.Ellips}
+              alt=""
+              className="absolute -top-20 right-0 md:hidden"
+            />
+            <Image src={assets.hero} alt="" className="w-[500px]" />
+          </div>
         </div>
       </header>
 
       {/* About Us */}
-      <section className="px-5 sm:px-10 md:px-20 mb-20">
-        <div className="lg:flex justify-between">
+      <section id="about" className="px-5 sm:px-10 md:px-20 mb-20 ">
+        <div className="lg:flex justify-between pt-36">
           <div className="lg:w-[48%]">
             <Image src={assets.cyberSecurity} alt="cyber security" />
           </div>
@@ -96,8 +104,8 @@ export default function Home() {
         </div> */}
       </section>
 
-      {/* Our sercices */}
-      <section className="overflow-y-hidden overflow-hidden">
+      {/* Our services */}
+      <section id="service" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
             src={assets.EllipsBg}
@@ -111,7 +119,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="px-5 sm:px-10 md:px-20">
+        <div className="px-5 sm:px-10 md:px-20 pt-28">
           <div className="flex justify-center">
             <div className="flex justify-center flex-col lg:w-[70%] text-center">
               <h6 className="text-[#3ED5DD]">Our Service</h6>
@@ -152,7 +160,9 @@ export default function Home() {
             </div>
 
             <div className="md:mt-10 lg:mt-0">
-              <div className=" bg-gradient-to-r from-[#32333593] via-[#171717] via-30% via-[#171717] via-60% to-[#32333593] border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center px-10 py-5 text-white">
+              <div
+                className={`${cardGradient} border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center px-10 py-5 text-white`}
+              >
                 <Image
                   src={assets.IconCyberSecurity2}
                   alt=""
@@ -169,7 +179,9 @@ export default function Home() {
             </div>
 
             <div className=" lg:mt-7 md:mt-10">
-              <div className=" bg-gradient-to-r from-[#32333593] via-[#171717] via-30% via-[#171717] via-60% to-[#32333593] border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center px-10 py-5 text-white">
+              <div
+                className={`${cardGradient} border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center px-10 py-5 text-white`}
+              >
                 <Image
                   src={assets.IconCyberSecurity3}
                   alt=""
@@ -204,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* Future point */}
-      <section className="overflow-y-hidden overflow-hidden">
+      <section id="feature" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
             src={assets.EllipsBg}
@@ -218,7 +230,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="px-5 sm:px-10 md:px-20 mt-20">
+        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-14">
           <div className="lg:flex justify-between">
             <div className="lg:w-[47%] z-30">
               <div>
@@ -234,7 +246,7 @@ export default function Home() {
               <h1 className="text-2xl lg:text-3xl xl:text-5xl text-white font-semibold mt-4">
                 Key Service Features Protecting You
               </h1>
-              <p className="mt-4 text-lg lg:text-base xl:text-lg text-white">
+              <p className="mt-4 text-base lg:text-base xl:text-lg text-white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Vestibulum congue metus quis accumsan euismod. Maecenas sed est
                 mollis, convallis nisi convallis, imperdiet massa.{" "}
@@ -307,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* Our goal */}
-      <section className="overflow-y-hidden overflow-hidden">
+      <section id="goal" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
             src={assets.EllipsBg}
@@ -321,14 +333,14 @@ export default function Home() {
           />
         </div>
 
-        <div className="px-5 sm:px-10 md:px-20 mt-20">
+        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
           <div className="flex justify-center">
             <div className="flex justify-center flex-col lg:w-[70%] text-center">
               <h6 className="text-[#3ED5DD]">OUR GOALS</h6>
-              <h2 className="text-5xl text-white my-2">
+              <h2 className="lg:text-5xl md:text-3xl text-2xl text-white my-2">
                 Securing Your Digital World Together
               </h2>
-              <h5 className="text-white">
+              <h5 className="text-white text-base">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Vestibulum congue metus quis accumsan euismod. Maecenas sed est
                 mollis, convallis nisi convallis, imperdiet massa.
@@ -415,7 +427,7 @@ export default function Home() {
       </section>
 
       {/* Pricing table */}
-      <section className="overflow-y-hidden overflow-hidden">
+      <section id="pricing" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
             src={assets.EllipsBg}
@@ -429,11 +441,11 @@ export default function Home() {
           />
         </div>
 
-        <div className="px-5 sm:px-10 md:px-20 mt-20 z-50">
+        <div className="px-5 sm:px-10 md:px-20 mt-20 z-50 pt-16">
           <div className="flex justify-center">
             <div className="flex justify-center flex-col lg:w-[70%] text-center">
               <h6 className="text-[#3ED5DD]">PRICING TABLE</h6>
-              <h2 className="text-5xl text-white my-2">
+              <h2 className="lg:text-5xl md:text-3xl text-2xl text-white my-2">
                 Start using cyber security protect
               </h2>
               <h5 className="text-white">
@@ -601,7 +613,7 @@ export default function Home() {
       </section>
 
       {/* testimonial */}
-      <section className="overflow-y-hidden overflow-hidden">
+      <section id="testimonial" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
             src={assets.EllipsBg}
@@ -615,14 +627,14 @@ export default function Home() {
           />
         </div>
 
-        <div className="px-5 sm:px-10 md:px-20 mt-20">
+        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
           <div className="flex justify-center">
             <div className="flex justify-center flex-col lg:w-[70%] text-center">
               <h6 className="text-[#3ED5DD]">TESTIMONIAL</h6>
-              <h2 className="text-5xl text-white my-2">
+              <h2 className="lg:text-5xl md:text-3xl text-2xl text-white my-2">
                 See What Others People Are Saying
               </h2>
-              <h5 className="text-white">
+              <h5 className="text-white ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Vestibulum congue metus quis accumsan euismod. Maecenas sed est
                 mollis, convallis nisi convallis, imperdiet massa.
@@ -828,57 +840,132 @@ export default function Home() {
         </div>
 
         <div className="px-5 sm:px-10 md:px-20 py-10 mt-10">
-          <div className="grid sm:grid-cols-2 gap-4 justify-center items-center md:justify-start md:items-start lg:grid-cols-4 text-white">
-            {/* first part */}
-            <div>
-              <div className="flex items-center">
-                <Image src={assets.BrandLogo} alt="" width={50} />
-                <h3 className="text-white text-4xl ms-5">
-                  Abi
-                  <span className="text-[#3ED5DD]">sentry</span>
-                </h3>
-              </div>
-              <p>xxxxxxxxx</p>
-              <div>social links</div>
+          <div className="md:flex justify-between items-start mb-7">
+            <div className="flex items-center">
+              <Image src={assets.BrandLogo} alt="" width={50} />
+              <h3 className="text-white text-4xl ms-5">
+                Abi
+                <span className="text-[#3ED5DD]">sentry</span>
+              </h3>
             </div>
-
-            {/* second  */}
-            <div>
-              <h3>Quick Link</h3>
-              <ul>
-                <li>Our Service</li>
-                <li>About Us</li>
-                <li>Pricing</li>
-                <li>Testimonial</li>
-              </ul>
-            </div>
-
-            {/* third */}
-            <div>
-              <h3>Quick Link</h3>
-              <ul>
-                <li>abisentry3@gmail.com</li>
-                <li>i dont know</li>
-                <li>+234700000000</li>
-              </ul>
-            </div>
-
-            {/* Last part */}
-            <div>
-              <h3>Newletter</h3>
+            <div className="md:w-[60%] text-white mt-5 md:mt-0">
+              <h3 className="text-2xl mb-5">Newletter</h3>
               <form action="">
                 <div className="flex relative">
                   <input
-                    type="button"
-                    value=""
-                    placeholder="Email"
-                    className="w-[100%] bg-white py-2 px-4 rounded-2xl"
+                    type="email"
+                    placeholder="Enter your emai"
+                    className="w-[100%] text-xl text-black bg-white py-4 px-4 rounded-2xl outline-none"
                   />
-                  <button type="submit" className="bg-red-900 p-4 absolute">
+                  <button
+                    type="submit"
+                    className="bg-[#3ED5DD] p-2 px-2 rounded-xl absolute right-4 top-2"
+                  >
                     Subcribe
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+
+          <div className="lg:grid lg:grid-cols-2 text-center text-white">
+            {/* first part */}
+            <div className="md:flex justify-between">
+              <div className="text-xl md:w-[50%] mt-4">
+                <h1 className="text-2xl">Services</h1>
+                <div className="mt-2 text-base lg:text-lg md:text-start text-gray-300">
+                  {[
+                    "End point protextion",
+                    "Vulnerability Assessment",
+                    "Account Review",
+                    "Therath Intelligences",
+                    "Incident Responce",
+                    "Compiances and Regulation",
+                  ].map((text, i) => (
+                    <p key={i}>{text}</p>
+                  ))}
+                </div>
+              </div>
+
+              {/* second  */}
+              <div className="text-xl md:w-[50%] mt-4">
+                <h1 className="text-2xl">About Us</h1>
+                <div className="mt-2 text-base lg:text-lg md:text-start lg:text-center text-gray-300">
+                  {["Career", "Press", "Blog", "SiteMap"].map((text, i) => (
+                    <p key={i} className="my-2">
+                      {text}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* third */}
+            <div className="md:flex justify-between">
+              <div className=" text-xl md:w-[50%] mt-4">
+                <h1 className=" text-2xl">Quick Link</h1>
+                <ul className=" mt-2 text-base lg:text-lg md:text-start lg:text-center text-gray-300">
+                  <li>Testimonial</li>
+                  <li>Our Service</li>
+                  <li>About Us</li>
+                  <li>Pricing</li>
+                  <li>Our Goals</li>
+                </ul>
+              </div>
+
+              {/* last */}
+              <div className=" text-2xl md:w-[50%] mt-4">
+                <h3>Contact Us</h3>
+                <div className=" mt-4 flex justify-center md:justify-between text-gray-300">
+                  <Link
+                    href="/#"
+                    className="border-[1px] border-gray-300 rounded-xl p-2 mx-6 md:mx-0"
+                  >
+                    <FaInstagram className="text-2xl" />
+                  </Link>
+                  <Link
+                    href="/#"
+                    className="border-[1px] border-gray-300 rounded-xl p-2 mx-6 md:mx-0"
+                  >
+                    <FiFacebook className="text-2xl" />
+                  </Link>
+                  <Link
+                    href="/#"
+                    className="border-[1px] border-gray-300 rounded-xl p-2 mx-6 md:mx-0"
+                  >
+                    <FaXTwitter className="text-2xl" />
+                  </Link>
+                  <Link
+                    href="/#"
+                    className="border-[1px] border-gray-300 rounded-xl p-2 mx-6 md:mx-0"
+                  >
+                    <FiYoutube className="text-2xl" />
+                  </Link>
+                  {/* <li>i dont know</li>
+                  <li>+234700000000</li> */}
+                </div>
+
+                <div className="flex justify-center items-center md:justify-start md:items-start flex-col">
+                  <div className="flex items-center my-5">
+                    <HiOutlineMail className="text-2xl" />
+                    <Link
+                      href="abbisentry03@gmail.com"
+                      className="ms-3 text-sm text-gray-300"
+                    >
+                      abbisentry03@gmail.com
+                    </Link>
+                  </div>
+                  <div className="flex items-center mb-5">
+                    <IoLocationOutline className="text-2xl" />
+                    <p className="ms-3 text-sm"> I dont know</p>
+                  </div>
+
+                  <div className="flex items-center">
+                    <LuPhone className="text-2xl" />
+                    <p className="ms-3 text-sm"> +234 7067140451</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

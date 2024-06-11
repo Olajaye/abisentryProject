@@ -1,10 +1,12 @@
 
 
 const NavLinks = [
-  { name: "Home", link: "/#" },
-  { name: "FAQ", link: "/#" },
-  { name: "Contact Us", link: "/#" },
-  { name: "Our Menu", link: "/#" }
+  { name: "Home", link: "#home" },
+  { name: "About", link: "#about" },
+  { name: "Services", link: "#service" },
+  { name: "Features", link: "#feature" },
+  { name: "Pricing", link: "#pricing" },
+ 
 ]
 
 export default NavLinks
