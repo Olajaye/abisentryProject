@@ -38,8 +38,8 @@ export default function Home() {
                 <h2>Fortress | Guard</h2>
                 <p className="text-xs lg:text-base">
                   We are on quest to reinforce the digital world and guarantee
-                  the safety of our clients' priceless assets, and we are fueled
-                  by a passion for security and a team of highly skilled
+                  the safety of our clients&apos; priceless assets, and we are
+                  fueled by a passion for security and a team of highly skilled
                   experts.
                 </p>
               </div>
@@ -79,7 +79,7 @@ export default function Home() {
             <p className="mt-4 text-lg lg:text-base xl:text-lg text-white">
               Understands the threat actors targeting your organization and
               optimizes your defenses against them. With intelligence at its
-              core, Abisentry's cybersecurity platform effectively prevents
+              core, Abisentry&apos;s cybersecurity platform effectively prevents
               breaches, fraud and other cyber threats.
             </p>
           </div>
@@ -833,9 +833,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* testimonial footer */}
+      {/* testimonial  */}
+      {/* 
       <section id="testimonial" className="overflow-y-hidden overflow-hidden">
-        {/* <div className="relative">
+         <div className="relative">
           <Image
             src={assets.EllipsBg}
             alt=""
@@ -846,9 +847,9 @@ export default function Home() {
             alt=""
             className="w-[400px] absolute -top-[350px] -right-[180px] "
           />
-        </div> */}
+        </div> 
 
-        {/* <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
+        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
           <div className="flex justify-center">
             <div className="flex justify-center flex-col lg:w-[70%] text-center">
               <h6 className="text-[#3ED5DD]">TESTIMONIAL</h6>
@@ -1029,9 +1030,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className="relative">
+         <div className="relative">
           <Image
             src={assets.EllipsBg}
             alt=""
@@ -1042,8 +1043,9 @@ export default function Home() {
             alt=""
             className="w-[400px] absolute -bottom-[250px] -left-[180px] "
           />
-        </div> */}
-      </section>
+        </div> 
+    </section>
+    */}
 
       {/* Footer */}
       <section className="overflow-y-hidden overflow-hidden">
