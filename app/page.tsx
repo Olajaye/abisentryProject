@@ -8,6 +8,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhone } from "react-icons/lu";
+import { OurService } from "./constant/Service";
+import { Team } from "./constant/team";
 
 export default function Home() {
   const aboutGradient =
@@ -32,13 +34,13 @@ export default function Home() {
                 <Image src={assets.group} alt="" className="h-[80%]" />
               </div>
               <div className="text-2xl sm:text-3xl lg:text-5xl text-white h-auto w-auto">
-                <h2>Comprehensive</h2>
-                <h2>Cybersecurity Strategies for </h2>
-                <h2>Growth and Resilience</h2>
+                <h2>Your Digital </h2>
+                <h2>Fortress | Guard</h2>
                 <p className="text-xs lg:text-base">
-                  Unlock your business&apos;s full potential with our
-                  comprehensive cybersecurity strategies. Safeguard your growth
-                  and resilience in the digital age.
+                  We are on quest to reinforce the digital world and guarantee
+                  the safety of our clients' priceless assets, and we are fueled
+                  by a passion for security and a team of highly skilled
+                  experts.
                 </p>
               </div>
             </div>
@@ -48,7 +50,7 @@ export default function Home() {
               className="text-white md:ms-10 mb-5 md:mb-10 mt-5 md:mt-[5%] bg-gradient-to-r from-[#00A7D6] to-[#0A767B] w-48 px-4 py-2 rounded-lg"
             >
               {" "}
-              Learn more
+              Talk to Sales
             </Link>
           </div>
           <div className="relative">
@@ -62,25 +64,23 @@ export default function Home() {
         </div>
       </header>
 
-      {/* About Us */}
+      {/*  Our Quest */}
       <section id="about" className="px-5 sm:px-10 md:px-20 mb-20 ">
         <div className="lg:flex justify-between pt-36">
           <div className="lg:w-[48%]">
             <Image src={assets.cyberSecurity} alt="cyber security" />
           </div>
           <div className="lg:w-[48%]">
-            <h6 className="text-[#3ED5DD]">ABOUT US</h6>
+            <h6 className="text-[#3ED5DD]"> OUR QUEST</h6>
             <h1 className="text-2xl lg:text-3xl xl:text-5xl text-white font-semibold mt-4">
-              Discover Our Journey Protecting Your Digital World with Expertise
-              and Care
+              Powering cybersecurity Intelligence with Abisentry Unified Risk
+              Platform
             </h1>
             <p className="mt-4 text-lg lg:text-base xl:text-lg text-white">
-              At <span className="text-[#3ED5DD]">Abisentry,</span> we&apos;re
-              dedicated to protecting businesses and individuals from the
-              ever-evolving threats in the digital landscape. With 5years of
-              experience in the cybersecurity industry, we have honed our
-              expertise to deliver innovative solutions that safeguard your
-              digital assets and maintain your peace of mind.
+              Understands the threat actors targeting your organization and
+              optimizes your defenses against them. With intelligence at its
+              core, Abisentry's cybersecurity platform effectively prevents
+              breaches, fraud and other cyber threats.
             </p>
           </div>
         </div>
@@ -136,30 +136,25 @@ export default function Home() {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-4 mt-10 lg:mt-20">
-            <div className="lg:mt-5 md:mt-10">
+            {OurService.map((item) => (
               <div
-                className={`${cardGradient} border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center px-10 py-5 text-white`}
+                key={item.id}
+                className={`${cardGradient} border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center p-2 text-white`}
               >
                 <Image
-                  src={assets.IconCyberSecurity}
+                  src={item.image}
                   alt=""
-                  className="border-[#3ED5DD] border-[1px] rounded-full p-3 bg-[#0A767B] absolute -top-[35px] w-[70px]"
+                  className="border-[#3ED5DD] border-[1px] rounded-full p-3 bg-[#191919] absolute -top-[35px] w-[70px]"
                 />
 
-                <h4 className="text-center mt-10 text-3xl">
-                  Cyber security Assessment{" "}
-                </h4>
+                <h4 className="text-center mt-10 text-3xl">{item.title}</h4>
                 <p className="text-center text-sm leading-7 mt-5">
-                  Protect your devices and networks from malware, ransomware,
-                  and other cyber threats with our comprehensive endpoint
-                  security solutions. Safeguard sensitive data and ensure
-                  business continuity with real-time threat detection and
-                  response.{" "}
+                  {item.text}
                 </p>
               </div>
-            </div>
+            ))}
 
-            <div className="md:mt-10 lg:mt-0">
+            {/* <div className="md:mt-10 lg:mt-0">
               <div
                 className={`${cardGradient} border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center px-10 py-5 text-white`}
               >
@@ -176,9 +171,9 @@ export default function Home() {
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
               </div>
-            </div>
+            </div> */}
 
-            <div className=" lg:mt-7 md:mt-10">
+            {/* <div className=" lg:mt-7 md:mt-10">
               <div
                 className={`${cardGradient} border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center px-10 py-5 text-white`}
               >
@@ -197,7 +192,7 @@ export default function Home() {
                   response.{" "}
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -215,7 +210,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Future point */}
+      {/* Future point /Out Team */}
       <section id="feature" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
@@ -230,7 +225,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-14">
+        {/* <div className="px-5 sm:px-10 md:px-20 mt-20 pt-14">
           <div className="lg:flex justify-between">
             <div className="lg:w-[47%] z-30">
               <div>
@@ -302,6 +297,50 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div> */}
+        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
+          <div className="flex justify-center">
+            <div className="flex justify-center flex-col lg:w-[70%] text-center">
+              <h6 className="text-[#3ED5DD]">OUT TEAM</h6>
+              <h2 className="lg:text-5xl md:text-3xl text-2xl text-white my-2">
+                Executive Team
+              </h2>
+              <h5 className="text-white text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum congue metus quis accumsan euismod. Maecenas sed est
+              </h5>
+            </div>
+          </div>
+
+          <div className="overflow-x-scroll overflow-y-hidden">
+            <div className="flex mt-10 w-[1550px] mb-5">
+              {Team.map((team, i) => (
+                <div
+                  className="flex items-center flex-col justify-center  text-white"
+                  key={i}
+                >
+                  <Image
+                    src={team.image}
+                    alt=""
+                    className={`${cardGradient} border-[1px] border-white rounded-full px-7 py-4 h-[200px] w-[200px] text-white  me-10 z-20 ms-6 `}
+                  />
+                  <h1>{team.name}</h1>
+                  <h3>{team.post}</h3>
+                  <div className="flex">
+                    <Link href="/#">
+                      <team.Facebook />
+                    </Link>
+                    <Link href="/#">
+                      <team.Twitter />
+                    </Link>
+                    <Link href="/#">
+                      <team.Twitter />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="relative">
@@ -318,7 +357,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our goal */}
+      {/* Our goal testinomi */}
       <section id="goal" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
@@ -333,7 +372,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
+        {/* <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
           <div className="flex justify-center">
             <div className="flex justify-center flex-col lg:w-[70%] text-center">
               <h6 className="text-[#3ED5DD]">OUR GOALS</h6>
@@ -407,6 +446,188 @@ export default function Home() {
                   Protect your devices and networks from malware, ransomware,
                   and
                 </p>
+              </div>
+            </div>
+          </div>
+        </div> */}
+        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
+          <div className="flex justify-center">
+            <div className="flex justify-center flex-col lg:w-[70%] text-center">
+              <h6 className="text-[#3ED5DD]">TESTIMONIAL</h6>
+              <h2 className="lg:text-5xl md:text-3xl text-2xl text-white my-2">
+                See What Others People Are Saying
+              </h2>
+              <h5 className="text-white ">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum congue metus quis accumsan euismod. Maecenas sed est
+                mollis, convallis nisi convallis, imperdiet massa.
+              </h5>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-10 z-20">
+            <div className="bg-[#1f1e1eaf] z-20 p-4 text-white">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum congue metus quis accumsan euismod. Maecenas sed est
+                mollis, convallis nisi convallis, imperdiet massa.{" "}
+              </p>
+              <div className="flex items-center mt-3">
+                <Image src={assets.Testimonial} alt="" width={70} height={70} />
+                <div className="ms-3">
+                  <h1 className="text-xl">Marianne Bode</h1>
+                  <h6 className="my-1">Product Intranet Agent</h6>
+                  <div className="flex">
+                    <Image src={assets.Star} alt="" width={20} />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#1f1e1eaf] z-20 p-4 text-white">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum congue metus quis accumsan euismod. Maecenas sed est
+                mollis, convallis nisi convallis, imperdiet massa.{" "}
+              </p>
+              <div className="flex items-center mt-3">
+                <Image src={assets.Testimonial} alt="" width={70} height={70} />
+                <div className="ms-3">
+                  <h1 className="text-xl">Marianne Bode</h1>
+                  <h6 className="my-1">Product Intranet Agent</h6>
+                  <div className="flex">
+                    <Image src={assets.Star} alt="" width={20} />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#1f1e1eaf] z-20 p-4 text-white">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum congue metus quis accumsan euismod. Maecenas sed est
+                mollis, convallis nisi convallis, imperdiet massa.{" "}
+              </p>
+              <div className="flex items-center mt-3">
+                <Image src={assets.Testimonial} alt="" width={70} height={70} />
+                <div className="ms-3">
+                  <h1 className="text-xl">Marianne Bode</h1>
+                  <h6 className="my-1">Product Intranet Agent</h6>
+                  <div className="flex">
+                    <Image src={assets.Star} alt="" width={20} />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-[#1f1e1eaf] z-20 p-4 text-white">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Vestibulum congue metus quis accumsan euismod. Maecenas sed est
+                mollis, convallis nisi convallis, imperdiet massa.{" "}
+              </p>
+              <div className="flex items-center mt-3">
+                <Image src={assets.Testimonial} alt="" width={70} height={70} />
+                <div className="ms-3">
+                  <h1 className="text-xl">Marianne Bode</h1>
+                  <h6 className="my-1">Product Intranet Agent</h6>
+                  <div className="flex">
+                    <Image src={assets.Star} alt="" width={20} />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                    <Image
+                      src={assets.Star}
+                      alt=""
+                      width={20}
+                      className="ms-1"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -612,9 +833,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* testimonial */}
+      {/* testimonial footer */}
       <section id="testimonial" className="overflow-y-hidden overflow-hidden">
-        <div className="relative">
+        {/* <div className="relative">
           <Image
             src={assets.EllipsBg}
             alt=""
@@ -625,9 +846,9 @@ export default function Home() {
             alt=""
             className="w-[400px] absolute -top-[350px] -right-[180px] "
           />
-        </div>
+        </div> */}
 
-        <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
+        {/* <div className="px-5 sm:px-10 md:px-20 mt-20 pt-20">
           <div className="flex justify-center">
             <div className="flex justify-center flex-col lg:w-[70%] text-center">
               <h6 className="text-[#3ED5DD]">TESTIMONIAL</h6>
@@ -808,9 +1029,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="relative">
+        {/* <div className="relative">
           <Image
             src={assets.EllipsBg}
             alt=""
@@ -821,12 +1042,12 @@ export default function Home() {
             alt=""
             className="w-[400px] absolute -bottom-[250px] -left-[180px] "
           />
-        </div>
+        </div> */}
       </section>
 
       {/* Footer */}
       <section className="overflow-y-hidden overflow-hidden">
-        <div className="relative">
+        {/* <div className="relative">
           <Image
             src={assets.EllipsBg}
             alt=""
@@ -836,6 +1057,18 @@ export default function Home() {
             src={assets.Vector2}
             alt=""
             className="w-[400px] absolute -bottom-[250px] -left-[180px] "
+          />
+        </div> */}
+        <div className="relative">
+          <Image
+            src={assets.EllipsBg}
+            alt=""
+            className="absolute -top-[350px] -right-[340px] w-[50%]"
+          />
+          <Image
+            src={assets.Vector}
+            alt=""
+            className="w-[400px] absolute -top-[350px] -right-[180px] "
           />
         </div>
 
