@@ -7,7 +7,7 @@ import { CiMenuFries } from "react-icons/ci";
 import Menu from "@/app/components/Menu";
 import { useState } from "react";
 
-const index = () => {
+const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <div className="bg-[#323335ad] fixed top-0 left-0 right-0 z-50 ">
@@ -41,4 +41,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Navbar;
