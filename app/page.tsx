@@ -10,6 +10,9 @@ import { IoLocationOutline } from "react-icons/io5";
 import { LuPhone } from "react-icons/lu";
 import { OurService } from "./constant/Service";
 import { Team } from "./constant/team";
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
+import { LiaLinkedinIn } from "react-icons/lia";
 
 export default function Home() {
   const aboutGradient =
@@ -22,21 +25,21 @@ export default function Home() {
       <Image
         src={assets.Ellips}
         alt=""
-        className="absolute -top-60 right-10 hidden w-[60%] md:block"
+        className="absolute -top-40 right-10 hidden w-[60%] md:block"
       />
 
       {/* Hero */}
       <header id="home">
-        <div className="md:flex px-5 sm:px-10 md:px-20 pt-40 md:pt-64">
-          <div className="h-auto flex flex-col justify-end ">
+        <div className="md:flex px-5 sm:px-10 md:px-20 pt-40 md:pt-52">
+          <div className="h-auto flex flex-col justify-end md:w-[60%]">
             <div className="flex">
               <div className="flex flex-col justify-center items-center">
                 <Image src={assets.group} alt="" className="h-[80%]" />
               </div>
-              <div className="text-2xl sm:text-3xl lg:text-5xl text-white h-auto w-auto">
+              <div className="text-5xl lg:text-6xl text-white h-auto w-auto font-extrabold">
                 <h2>Your Digital </h2>
                 <h2>Fortress | Guard</h2>
-                <p className="text-xs lg:text-base">
+                <p className="text-xs lg:text-base mt-4 font-medium">
                   We are on quest to reinforce the digital world and guarantee
                   the safety of our clients&apos; priceless assets, and we are
                   fueled by a passion for security and a team of highly skilled
@@ -53,7 +56,7 @@ export default function Home() {
               Talk to Sales
             </Link>
           </div>
-          <div className="relative">
+          <div className="relative md:w-[40%]">
             <Image
               src={assets.Ellips}
               alt=""
@@ -139,15 +142,15 @@ export default function Home() {
             {OurService.map((item) => (
               <div
                 key={item.id}
-                className={`${cardGradient} border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col justify-center items-center p-2 text-white`}
+                className={`${cardGradient} border-[1px] border-[#3ED5DD] rounded-3xl relative h-auto flex flex-col  p-2 text-white`}
               >
                 <Image
                   src={item.image}
                   alt=""
-                  className="border-[#3ED5DD] border-[1px] rounded-full p-3 bg-[#191919] absolute -top-[35px] w-[70px]"
+                  className="border-[#3ED5DD] border-[1px] rounded-full p-3 bg-[#191919] w-[80px]"
                 />
 
-                <h4 className="text-center mt-10 text-3xl">{item.title}</h4>
+                <h4 className="text-center mt-5 text-3xl">{item.title}</h4>
                 <p className="text-center text-sm leading-7 mt-5">
                   {item.text}
                 </p>
@@ -313,28 +316,37 @@ export default function Home() {
           </div>
 
           <div className="overflow-x-scroll overflow-y-hidden">
-            <div className="flex mt-10 w-[1550px] mb-5">
+            <div className="flex mt-10 w-[1800px] mb-5">
               {Team.map((team, i) => (
                 <div
-                  className="flex items-center flex-col justify-center  text-white"
+                  className="flex items-center flex-col justify-center w-[50%] text-white"
                   key={i}
                 >
                   <Image
                     src={team.image}
-                    alt=""
-                    className={`${cardGradient} border-[1px] border-white rounded-full px-7 py-4 h-[200px] w-[200px] text-white  me-10 z-20 ms-6 `}
+                    alt={team.name}
+                    className={`${cardGradient} rounded-full h-[180px] w-[180px]`}
                   />
-                  <h1>{team.name}</h1>
-                  <h3>{team.post}</h3>
+                  <h1 className="mt-5 text-xl font-bold">{team.name}</h1>
+                  <h3 className="my-3">{team.post}</h3>
                   <div className="flex">
-                    <Link href="/#">
-                      <team.Facebook />
+                    <Link
+                      href={team.Facebook}
+                      className="border-[1px] border-white rounded-md"
+                    >
+                      <FaFacebookF className="text-2xl p-1" />
                     </Link>
-                    <Link href="/#">
-                      <team.Twitter />
+                    <Link
+                      href={team.Twitter}
+                      className="border-[1px] border-white mx-4 rounded-md"
+                    >
+                      <BsTwitterX className="text-2xl p-1" />
                     </Link>
-                    <Link href="/#">
-                      <team.Twitter />
+                    <Link
+                      href={team.Linkined}
+                      className="border-[1px] border-white rounded-md"
+                    >
+                      <LiaLinkedinIn className="text-2xl p-1" />
                     </Link>
                   </div>
                 </div>
@@ -357,8 +369,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our goal testinomi */}
-      <section id="goal" className="overflow-y-hidden overflow-hidden">
+      {/* TESTIMONIAL testinomi */}
+      <section id="testimonial" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
             src={assets.EllipsBg}
@@ -648,7 +660,7 @@ export default function Home() {
       </section>
 
       {/* Pricing table */}
-      <section id="pricing" className="overflow-y-hidden overflow-hidden">
+      {/* <section id="pricing" className="overflow-y-hidden overflow-hidden">
         <div className="relative">
           <Image
             src={assets.EllipsBg}
@@ -831,7 +843,7 @@ export default function Home() {
             className="w-[400px] absolute -top-[350px] -right-[180px] "
           />
         </div>
-      </section>
+      </section> */}
 
       {/* testimonial  */}
       {/* 
@@ -1065,12 +1077,12 @@ export default function Home() {
           <Image
             src={assets.EllipsBg}
             alt=""
-            className="absolute -top-[350px] -right-[340px] w-[50%]"
+            className="absolute -bottom-[350px] -left-[340px] w-[50%]"
           />
           <Image
-            src={assets.Vector}
+            src={assets.Vector2}
             alt=""
-            className="w-[400px] absolute -top-[350px] -right-[180px] "
+            className="w-[400px] absolute -bottom-[250px] -left-[180px] "
           />
         </div>
 

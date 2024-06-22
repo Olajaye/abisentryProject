@@ -5,8 +5,7 @@ const NavLinks = [
   { name: "About", link: "#about" },
   { name: "Services", link: "#service" },
   { name: "Features", link: "#feature" },
-  { name: "Pricing", link: "#pricing" },
- 
+  { name: "Testimonial", link: "#testimonial" },
 ]
 
 export default NavLinks
